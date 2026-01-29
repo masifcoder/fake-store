@@ -1,6 +1,10 @@
 import { useState } from 'react'
 import "./App.css";
-import Home from './Home';
+import {Routes, Route} from "react-router-dom";
+import HomePage from './pages/HomePage';
+import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
+import Navbar from './components/Navbar';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -8,8 +12,12 @@ function App() {
   return (
     <>
      <div className='container'>
-        <h1 className='my-3 text-center'>Fake Store</h1>
-        <Home />
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+          <Route path='/about' element={<AboutPage />} />
+          <Route path='/contact' element={<ContactPage />} />
+        </Routes>
      </div>
     </>
   )

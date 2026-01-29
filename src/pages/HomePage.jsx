@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 
-function Home() {
+function HomePage() {
     const [products, setProducts] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
 
@@ -29,7 +29,7 @@ function Home() {
     return (
         <>
             <div className="row">
-
+                <h1 className="my-3 text-center">All Products</h1>
                 {
                     (isLoading == true) ? <div className="text-center">
                         <div className="spinner-border" role="status">
@@ -60,4 +60,4 @@ function Home() {
     )
 }
 
-export default Home
+export default HomePage
