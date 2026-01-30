@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 
 function HomePage() {
@@ -47,7 +48,7 @@ function HomePage() {
                                     <div className="card-body">
                                         <h5 className="card-title text-truncate">{product.title}</h5>
                                         <h6 className="card-title">Price: ${product.price}</h6>
-                                        <a href="#" className="btn btn-primary">view details</a>
+                                        <Link to={`/details/${product.id}`} className="btn btn-primary">view details</Link>
                                     </div>
                                 </div>
                             </div>
